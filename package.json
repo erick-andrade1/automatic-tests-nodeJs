@@ -1,0 +1,29 @@
+{
+  "name": "test-codecept",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erick-andrade1/test-codecept.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erick-andrade1/test-codecept/issues"
+  },
+  "homepage": "https://github.com/erick-andrade1/test-codecept#readme",
+  "devDependencies": {
+    "codeceptjs": "^3.3.4",
+    "puppeteer": "^15.5.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  }
+}
