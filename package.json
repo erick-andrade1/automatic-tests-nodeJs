@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "cross-env NODE_ENV=test sequelize db:migrate",
+    "test": "cross-env NODE_ENV=test jest",
+    "posttest": "cross-env NODE_ENV=test sequelize db:migrate:undo:all",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__"
   },
   "repository": "git+https://github.com/erick-andrade1/test-codecept.git",
   "author": "erick-andrade1 <erickandradesilva@hotmail.com>",
@@ -14,12 +18,20 @@
   },
   "homepage": "https://github.com/erick-andrade1/test-codecept#readme",
   "devDependencies": {
-    "codeceptjs": "^3.3.4",
+    "@faker-js/faker": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "jest": "^28.1.3",
     "puppeteer": "^15.5.0",
-    "sequelize-cli": "^6.4.1"
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.10",
+    "supertest": "^6.2.4"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "factory-girl": "^5.0.4",
+    "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.3",
     "sequelize": "^6.21.3"
   }
